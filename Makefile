@@ -22,8 +22,10 @@ assets: #bootstrap
 	BOOTSTRAP_JS_DIR=$(shell find $(shell gem environment gemdir)/gems/ \
 		-name bootstrap-sass-*)/vendor/assets/javascripts/bootstrap/ && \
 	uglifyjs -o scripts.js \
-		{jquery,profile,navigation}.js \
-		$$BOOTSTRAP_JS_DIR/{affix,alert,carousel,dropdown,scrollspy}.js
+		{../../../../django-organice-theme/organice_theme/static/js/scripts,jquery.fullPage}.js
+#
+# NOTE: to add Bootstrap modules: add \ at end of previous line and
+# $$BOOTSTRAP_JS_DIR/{bootstrap_module_1,bootstrap_module_2,...}.js
 
 bootstrap:
 	@echo "Updating your system-wide bootstrap-sass installation... (may require your password)"
