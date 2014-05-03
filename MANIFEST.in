@@ -2,7 +2,7 @@ include LICENSE
 include README.rst
 recursive-include */static *
 recursive-include */templates *
-prune */static/config.rb
-prune */static/css/jquery.fullPage.css
-prune */static/js/jquery.fullPage.js
-prune */static/sass
+exclude */static/config.rb
+exclude */static/css/jquery.fullPage.css
+exclude */static/js/jquery.fullPage.js
+recursive-exclude */static/sass *
