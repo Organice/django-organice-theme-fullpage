@@ -1,0 +1,24 @@
+{% extends "organice:skeleton.html" %}
+{% load staticfiles sekizai_tags menu_tags %}
+
+{% block sekizai %}
+{% addtoblock "css" strip %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/jquery.fullPage.css' %}">
+{% endaddtoblock %}
+{% addtoblock "js" strip %}
+	<script type="text/javascript" src="{% static 'js/jquery.fullPage.min.js' %}"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage();
+		});
+	</script>
+{% endaddtoblock %}
+{% endblock sekizai %}
+
+{% block main %}
+	<div id="nav"><ul id="nav" class="hidden-print">{% spaceless %}
+		{% block nav %}{% show_menu 0 100 100 100 %}{% endblock nav %}
+	{% endspaceless %}</ul></div>
+	<div id="content">{% block content %}{% endblock %}</div>
+{% endblock main %}
+
