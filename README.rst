@@ -30,8 +30,8 @@ something like this::
     │   ├── organice_theme
     │   │   ├── static
     │   │   └── templates
-    ├── django-organice-theme-rssk
-    │   ├── organice_theme_rssk
+    ├── django-organice-theme-fullpage
+    │   ├── organice_theme_fullpage
     │   │   ├── static
     │   │   └── templates
 
