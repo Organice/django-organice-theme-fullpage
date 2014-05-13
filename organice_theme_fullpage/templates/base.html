@@ -1,12 +1,11 @@
 {% extends "organice_theme:skeleton.html" %}
 {% load staticfiles sekizai_tags menu_tags %}
 
+{% block theme_css %}{% static 'css/styles.css' %}{% endblock theme_css %}
+{% block theme_js %}{% static 'js/scripts.js' %}{% endblock theme_js %}
+
 {% block sekizai %}
-{% addtoblock "css" strip %}
-	<link rel="stylesheet" type="text/css" href="{% static 'css/jquery.fullPage.css' %}">
-{% endaddtoblock %}
 {% addtoblock "js" strip %}
-	<script type="text/javascript" src="{% static 'js/jquery.fullPage.min.js' %}"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage();
@@ -21,4 +20,3 @@
 	{% endspaceless %}</ul></div>
 	<div id="content">{% block content %}{% endblock %}</div>
 {% endblock main %}
-

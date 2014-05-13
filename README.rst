@@ -2,7 +2,7 @@
 django Organice Full-Page Theme
 ===============================
 
-A `django Organice`_ theme with full-page display used by Organice.io
+A `django Organice`_ theme with full-page display as used by Organice.io
 
 How To Use This Theme
 =====================
@@ -40,6 +40,12 @@ Then, loop until you're happy:
 - Add or adapt the style sheet (``.scss``), JavaScript (``.js``), and other files in ``organice_theme_fullpage/static/``.
 - Run ``make assets`` in order to compile the Sass files to CSS, and combine and minify both CSS und JavaScript.
 - Adapt the template files in ``organice_theme_fullpage/templates/``, and test the results on your development system.
+
+*NOTE:* Themes that intend to override the base theme's styles and JavaScript must define the following two lines in
+``templates/base.html``::
+
+    {% block theme_css %}{% static 'css/styles.css' %}{% endblock theme_css %}
+    {% block theme_js %}{% static 'js/scripts.js' %}{% endblock theme_js %}
 
 Download and Contributions
 ==========================
