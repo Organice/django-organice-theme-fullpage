@@ -13,9 +13,9 @@ How To Use This Theme
 
 #. Add ``organice_theme_fullpage`` to your ``INSTALLED_APPS``::
 
-    'organice',
-    'organice_theme',
     'organice_theme_fullpage',
+    'organice_theme',
+    'organice',
     ...
 
 How To Modify This Theme
