@@ -3,6 +3,9 @@
 // - For complete list of Bootstrap variables and documentation see:
 // https://github.com/twbs/bootstrap-sass/blob/master/vendor/assets/stylesheets/bootstrap/_variables.scss
 
+// base theme variables
+@import "../../../../django-organice-theme/organice_theme/static/sass/variables";
+
+// theme specific
+
 // Bootstrap
-$brand-primary: #008195;
-$breadcrumb-color: #5e5e5e;
