@@ -2,6 +2,19 @@
  * Full-page main styling.
  */
 
+.alpha60 {
+	background: rgb(36, 45, 74) transparent;  /* Fallback for web browsers that don't support RGBa */
+	background: rgba(36, 45, 74, 0.6);  /* RGBa with 0.6 opacity */
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);  /* For IE 5.5 - 7*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";  /* For IE 8*/
+}
+
+.text-glow {
+	text-shadow: 1px 0px 0px #686868, 1px 1px 0px #686868, 0px 1px 0px #686868; /*,
+		-1px 1px 0px #686868, -1px 0px 0px #686868, -1px -1px 0px #686868,
+		0px -1px 0px #686868, 1px -1px 0px #686868, 1px 4px 5px #aeaeae;*/
+}
+
 body {
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;
@@ -17,6 +30,7 @@ footer {
 
 header,
 footer {
+	@extend .alpha60;
 	color: #f2f2f2;
 	display: block;
 	position: fixed;
@@ -30,21 +44,6 @@ footer {
 		margin: 0;
 		padding: 0 0.6em;
 	}
-}
-
-header,
-footer,
-.alpha60 {
-	background: rgb(36, 45, 74) transparent;  /* Fallback for web browsers that don't support RGBa */
-	background: rgba(36, 45, 74, 0.6);  /* RGBa with 0.6 opacity */
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);  /* For IE 5.5 - 7*/
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";  /* For IE 8*/
-}
-
-.text-glow {
-	text-shadow: 1px 0px 0px #686868, 1px 1px 0px #686868, 0px 1px 0px #686868; /*,
-		-1px 1px 0px #686868, -1px 0px 0px #686868, -1px -1px 0px #686868,
-		0px -1px 0px #686868, 1px -1px 0px #686868, 1px 4px 5px #aeaeae;*/
 }
 
 #fullpage {
