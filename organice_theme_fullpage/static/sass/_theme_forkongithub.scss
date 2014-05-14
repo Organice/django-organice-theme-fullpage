@@ -5,22 +5,24 @@
 
 #forkongithub {
 	a {
-		background: rgb(0, 84, 166);
-		color: rgb(230, 230, 230);
+		background: $organice-color-blue;
+		color: $gray-lighter;
 		text-decoration: none;
 		font-family: arial, sans-serif;
 		text-align: center;
 		font-weight: bold;
 		padding: 4px 30px;
-		font-size: 1rem;
-		line-height: 2rem;
-		position: relative;
+		font-size: 0.9em;
+		line-height: 1.8em;
+		position: absolute;
+		top: 5px;
+		right: 47px;
 		transition: 0.5s;
 	}
 
 	a:hover {
-		background: rgb(55, 171, 244);
-		color: rgb(240, 240, 240);
+		background: $organice-color-lightblue;
+		color: #fff;
 	}
 
 	a::before,
@@ -41,7 +43,7 @@
 	}
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: $screen-xs) {
 	#forkongithub {
 		position: absolute;
 		display: block;
@@ -52,9 +54,9 @@
 		height: 200px;
 
 		a {
-			width: 200px;
+			width: 225px;
 			position: absolute;
-			top: 60px;
+			top: 40px;
 			right: -60px;
 			transform: rotate(45deg);
 			-webkit-transform: rotate(45deg);

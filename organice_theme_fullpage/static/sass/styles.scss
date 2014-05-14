@@ -1,9 +1,9 @@
 // customize bootstrap variables here:
 @import "variables";
-//@import "../../../../django-organice-theme/organice_theme/static/sass/bootstrap";
+@import "../../../../django-organice-theme/organice_theme/static/sass/bootstrap";
 
 // reuse base theme styles
-//@import "../../../../django-organice-theme/organice_theme/static/sass/theme";
+@import "../../../../django-organice-theme/organice_theme/static/sass/theme";
 
 // theme styles
 @import "fullpage";  // symlink to jquery.fullPage.css
