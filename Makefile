@@ -3,6 +3,7 @@
 
 # variables
 SHELL = /bin/bash
+VENDOR_REPO = https://raw.githubusercontent.com/alvarotrigo/fullPage.js/master
 
 .PHONY: help assets bootstrap bumpver clean release setuptools
 
@@ -16,6 +17,7 @@ help:
 	@echo "  uninstall     to uninstall this package using pip"
 	@echo "  release       to package a new release, and upload it to pypi.org"
 	@echo "  setuptools    to install setuptools or repair a broken pip installation"
+	@echo "  update        to pull all vendor assets from external resources"
 
 assets: #bootstrap
 	@echo "Building assets..."
@@ -24,7 +26,8 @@ assets: #bootstrap
 	BOOTSTRAP_JS_DIR=$(shell find $(shell gem environment gemdir)/gems/ \
 		-name bootstrap-sass-*)/vendor/assets/javascripts/bootstrap/ && \
 	uglifyjs -o scripts.js \
-		{../../../../django-organice-theme/organice_theme/static/js/scripts,jquery.fullPage}.js
+		../../../../django-organice-theme/organice_theme/static/js/scripts.js \
+		{jquery.easings.min,jquery.slimscroll.min,jquery.fullPage}.js
 #
 # NOTE: to add Bootstrap modules: add \ at end of previous line and
 # $$BOOTSTRAP_JS_DIR/{bootstrap_module_1,bootstrap_module_2,...}.js
@@ -62,3 +65,10 @@ setuptools:
 	python -c 'import setuptools' || \
 	curl -s -S https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py | python
 	rm -f setuptools-*.zip
+
+update:
+	@echo "Pulling fullPage.js assets from GitHub ... (NOTE: jQuery is part of base theme)"
+	cd */static/css && wget -nc -q $(VENDOR_REPO)/jquery.fullPage.css
+	cd */static/js && wget -nc -q $(VENDOR_REPO)/jquery.fullPage.js \
+		&& wget -nc -q $(VENDOR_REPO)/vendors/jquery.easings.min.js \
+		&& wget -nc -q $(VENDOR_REPO)/vendors/jquery.slimscroll.min.js
