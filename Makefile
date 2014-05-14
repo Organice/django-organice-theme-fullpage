@@ -3,7 +3,8 @@
 
 # variables
 SHELL = /bin/bash
-VENDOR_REPO = https://raw.githubusercontent.com/alvarotrigo/fullPage.js/master
+REPO_FULLPAGE = https://raw.githubusercontent.com/alvarotrigo/fullPage.js/master
+REPO_RIBBON = https://raw.githubusercontent.com/simonwhitaker/github-fork-ribbon-css/gh-pages
 
 .PHONY: help assets bootstrap bumpver clean release setuptools
 
@@ -68,7 +69,11 @@ setuptools:
 
 update:
 	@echo "Pulling fullPage.js assets from GitHub ... (NOTE: jQuery is part of base theme)"
-	cd */static/css && wget -nc -q $(VENDOR_REPO)/jquery.fullPage.css
-	cd */static/js && wget -nc -q $(VENDOR_REPO)/jquery.fullPage.js \
-		&& wget -nc -q $(VENDOR_REPO)/vendors/jquery.easings.min.js \
-		&& wget -nc -q $(VENDOR_REPO)/vendors/jquery.slimscroll.min.js
+	cd */static/css && wget -nc -q $(REPO_FULLPAGE)/jquery.fullPage.css
+	cd */static/js && wget -nc -q $(REPO_FULLPAGE)/jquery.fullPage.js \
+		&& wget -nc -q $(REPO_FULLPAGE)/vendors/jquery.easings.min.js \
+		&& wget -nc -q $(REPO_FULLPAGE)/vendors/jquery.slimscroll.min.js
+	@echo "Pulling 'Fork me' ribbon assets from GitHub ..."
+	cd */static/css \
+		&& wget -nc -q $(REPO_RIBBON)/gh-fork-ribbon.css \
+		&& wget -nc -q $(REPO_RIBBON)/gh-fork-ribbon.ie.css
