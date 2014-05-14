@@ -1,0 +1,106 @@
+/*
+ * Full-page main styling.
+ */
+
+body {
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+header {
+	top: 0;
+}
+
+footer {
+	bottom: 0;
+}
+
+header,
+footer {
+	color: #f2f2f2;
+	display: block;
+	position: fixed;
+	width: 100%;
+	height: 1.7em;
+	padding: 0.8em 0 0 0;
+	text-align: center;
+	z-index: 9;
+
+	p {
+		margin: 0;
+		padding: 0 0.6em;
+	}
+}
+
+header,
+footer,
+.alpha60 {
+	background: rgb(36, 45, 74) transparent;  /* Fallback for web browsers that don't support RGBa */
+	background: rgba(36, 45, 74, 0.6);  /* RGBa with 0.6 opacity */
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);  /* For IE 5.5 - 7*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";  /* For IE 8*/
+}
+
+.text-glow {
+	text-shadow: 1px 0px 0px #686868, 1px 1px 0px #686868, 0px 1px 0px #686868; /*,
+		-1px 1px 0px #686868, -1px 0px 0px #686868, -1px -1px 0px #686868,
+		0px -1px 0px #686868, 1px -1px 0px #686868, 1px 4px 5px #aeaeae;*/
+}
+
+#fullpage {
+	.section {
+		h1,
+		h2 {
+			margin: 0;
+			padding: 0;
+			font-size: 2em;
+		}
+
+		p {
+			font-size: 1.2em;
+		}
+
+		h1,
+		h2,
+		p {
+			@extend .text-glow;
+		}
+	}
+}
+
+.section {
+	background-size: cover;
+	padding: 3em 0 0 0;
+	text-align: center;
+}
+
+.tableCell {
+	vertical-align: top;
+}
+
+@media screen and (min-width: 500px) {
+	header,
+	footer {
+		height: 2.5em;
+		padding: 1.3em 0 0 0;
+	}
+
+	#fullpage {
+		.section {
+			h1,
+			h2 {
+				margin: 0;
+				padding: 0;
+				font-size: 3em;
+			}
+
+			p {
+				font-size: 1.5em;
+			}
+		}
+	}
+
+	.section {
+		padding: 5em 0 0 0;
+	}
+}

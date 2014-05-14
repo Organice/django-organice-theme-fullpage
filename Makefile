@@ -27,7 +27,7 @@ assets: #bootstrap
 		-name bootstrap-sass-*)/vendor/assets/javascripts/bootstrap/ && \
 	uglifyjs -o scripts.js \
 		../../../../django-organice-theme/organice_theme/static/js/scripts.js \
-		{jquery.easings.min,jquery.slimscroll.min,jquery.fullPage}.js
+		{jquery.easings.min,jquery.slimscroll.min,jquery.fullPage,fullpage_start}.js
 #
 # NOTE: to add Bootstrap modules: add \ at end of previous line and
 # $$BOOTSTRAP_JS_DIR/{bootstrap_module_1,bootstrap_module_2,...}.js
