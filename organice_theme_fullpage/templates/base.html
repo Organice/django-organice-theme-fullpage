@@ -5,12 +5,10 @@
 {% block theme_js %}{% static 'js/scripts.js' %}{% endblock theme_js %}
 
 {% block sekizai %}
-{% addtoblock "js" strip %}
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#fullpage').fullpage();
-		});
-	</script>
+{% addtoblock "css" strip %}
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" href="{% static 'css/gh-fork-ribbon.ie.css' %}">
+	<![endif]-->
 {% endaddtoblock %}
 {% endblock sekizai %}
 
