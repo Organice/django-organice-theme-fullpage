@@ -1,4 +1,4 @@
-{% extends "organice_theme:skeleton.html" %}
+{% extends "organice_theme:base.html" %}
 {% load staticfiles sekizai_tags menu_tags %}
 
 {% block theme_css %}{% static 'css/styles.css' %}{% endblock theme_css %}
@@ -6,15 +6,35 @@
 
 {% block sekizai %}
 {% addtoblock "css" strip %}
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat:400,700">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Cabin+Sketch">
 	<!--[if lt IE 9]>
 	<link rel="stylesheet" href="{% static 'css/gh-fork-ribbon.ie.css' %}">
 	<![endif]-->
 {% endaddtoblock %}
 {% endblock sekizai %}
 
-{% block main %}
-	<div id="nav"><ul id="nav" class="hidden-print">{% spaceless %}
-		{% block nav %}{% show_menu 0 100 100 100 %}{% endblock nav %}
-	{% endspaceless %}</ul></div>
-	<div id="content">{% block content %}{% endblock %}</div>
-{% endblock main %}
+{% block header_class %}{% endblock %}
+{% block container_class %}{% endblock %}
+{% block menu_class %}{% endblock %}
+{% block main_class %}{% endblock %}
+{% block nav_class %}{% endblock %}
+{% block content_class %}{% endblock %}
+{% block sidebar_class %}{% endblock %}
+{% block footer_class %}{% endblock %}
+
+{% block header %}
+	<a href="/" class="home">{{ current_site.name }}</a>
+	<div class="github-fork-ribbon-wrapper right">
+		<div class="github-fork-ribbon">
+			<a href="https://github.com/bittner/django-organice">Fork me on GitHub</a>
+		</div>
+	</div>
+{{ block.super }}
+{% endblock header %}
+
+{% block nav %}{% spaceless %}
+	{% show_menu 0 100 100 100 %}
+{% endspaceless %}{% endblock nav %}
+
+{% block content %}{% endblock content %}
