@@ -15,6 +15,11 @@
 		0px -1px 0px #686868, 1px -1px 0px #686868, 1px 4px 5px #aeaeae;*/
 }
 
+html,
+body {
+	overflow: visible;
+}
+
 body {
 	margin: 0;
 }
@@ -90,6 +95,14 @@ body {
 
 	#content {
 		margin: 3.2em 0.6em;
+	}
+
+	#fullpage {
+		margin: -3.2em -0.6em;
+
+		.section {
+			padding: 3.2em 0.6em;
+		}
 	}
 
 	h1,
