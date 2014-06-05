@@ -1,0 +1,22 @@
+/*
+ * CMS navigation, language and profile menus.
+ */
+
+#nav,
+#menu {
+	display: inline-block;
+}
+
+#nav {
+	padding: 0;
+
+	li {
+		display: inline-block;
+		margin: 0 0.6em;
+	}
+}
+
+#menu {
+	float: right;
+	margin-right: 7em;
+}

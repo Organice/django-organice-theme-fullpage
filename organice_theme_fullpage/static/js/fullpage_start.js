@@ -13,8 +13,9 @@ $(document).ready(function () {
 			$(image).remove();
 		}
 	});
+});
 
-	// start fullPage.js
+function fullPageStart() {
 	$('#fullpage').fullpage({
 		//easing: 'linear',
 		//anchors: ['1', '2', '3'],
@@ -23,4 +24,4 @@ $(document).ready(function () {
 		navigationTooltips: ['- 1 -', '- 2 -', '- 3 -'],
 		resize: false
 	});
-});
+}

@@ -5,3 +5,7 @@
 {{ block.super }}
 </div>
 {% endblock %}
+
+{% block js %}
+{{ block.super }}	<script type="text/javascript">fullPageStart();</script>
+{% endblock js %}
