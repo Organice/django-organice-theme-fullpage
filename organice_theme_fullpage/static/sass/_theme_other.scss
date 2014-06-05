@@ -1,6 +1,10 @@
 /*
- * CMS navigation, language and profile menus.
+ * Logo, CMS navigation, language and profile menus.
  */
+
+#logo {
+	margin: 0 0.9em;
+}
 
 #nav,
 #menu {
@@ -20,3 +24,13 @@
 	float: right;
 	margin-right: 7em;
 }
+
+// makes login and register look nice
+/*
+#container {
+	max-width: 600px;
+	margin: 5em auto;
+	padding: 0 1.5em 1em;
+	border: dotted 1px black;
+}
+*/
