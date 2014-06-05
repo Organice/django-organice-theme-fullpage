@@ -17,11 +17,10 @@ $(document).ready(function () {
 
 function fullPageStart() {
 	$('#fullpage').fullpage({
-		//easing: 'linear',
 		//anchors: ['1', '2', '3'],
-		//navigation: true,
+		navigation: true,
 		navigationPosition: 'right',
-		navigationTooltips: ['- 1 -', '- 2 -', '- 3 -'],
+		//navigationTooltips: ['- 1 -', '- 2 -', '- 3 -'],
 		resize: false
 	});
 }
