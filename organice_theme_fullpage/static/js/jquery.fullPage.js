@@ -1,5 +1,5 @@
 /**
- * fullPage 2.0.7
+ * fullPage 2.0.8
  * https://github.com/alvarotrigo/fullPage.js
  * MIT licensed
  *
@@ -132,7 +132,7 @@
 		//flag to avoid very fast sliding for landscape sliders
 		var slideMoving = false;
 
-		var isTablet = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|Windows Phone)/);
+		var isTablet = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|Windows Phone|Tizen|Bada)/);
 		var container = $(this); // for compatibity reasons for fullpage < v2.0
 		var windowsHeight = $(window).height();
 		var isMoving = false;
@@ -209,7 +209,7 @@
 
 			
 			// if there's any slide
-			if (numSlides > 0) {
+			if (numSlides > 1) {
 				var sliderWidth = numSlides * 100;
 				var slideWidth = 100 / numSlides;
 				
@@ -844,6 +844,16 @@
 						$.fn.fullpage.moveSectionDown();
 						break;
 
+					//Home
+					case 36:
+						$.fn.fullpage.moveTo(1);
+						break;
+
+					//End
+					case 35:
+						$.fn.fullpage.moveTo( $('.section').length );
+						break;
+
 					//left
 					case 37:
 						$.fn.fullpage.moveSlideLeft();
@@ -1152,7 +1162,7 @@
 			if(type === 'top'){
 				return !scrollable.scrollTop();
 			}else if(type === 'bottom'){
-				return scrollable.scrollTop() + scrollable.innerHeight() >= scrollable[0].scrollHeight;
+				return scrollable.scrollTop() + 1 + scrollable.innerHeight() >= scrollable[0].scrollHeight;
 			}
 		}
 		
