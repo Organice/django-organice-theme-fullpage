@@ -4,6 +4,11 @@ django Organice Full-Page Theme
 
 A `django Organice`_ theme with full-page display as used by Organice.io
 
+This theme uses functionality of some really awesome projects:
+
+- `fullPage.js`_ by Alvaro Trigo
+- `pure CSS Fork-Me ribbon`_ by Simon Whitaker
+
 How To Use This Theme
 =====================
 
@@ -64,6 +69,8 @@ Getting Help
 
 
 .. _`django Organice`: http://organice.io/
+.. _`fullPage.js`: https://github.com/alvarotrigo/fullPage.js
+.. _`pure CSS Fork-Me ribbon`: https://github.com/simonwhitaker/github-fork-ribbon-css
 .. _`django-organice-theme`: https://pypi.python.org/pypi/django-organice-theme
 .. _StackOverflow: http://stackoverflow.com/questions/tagged/django-organice
 .. _Bitbucket: https://bitbucket.org/bittner/django-organice-theme-fullpage/issues
