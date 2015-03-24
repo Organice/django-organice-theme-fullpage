@@ -2,6 +2,8 @@
 django Organice Full-Page Theme
 ===============================
 
+|latest-version| |downloads| |license|
+
 A `django Organice`_ theme with full-page display as used by Organice.io
 
 This theme uses functionality of some really awesome projects:
@@ -68,6 +70,15 @@ Getting Help
 - Found a bug? Please use either the Bitbucket_ or GitHub_ issue tracker (you choose)
 
 
+.. |latest-version| image:: https://img.shields.io/pypi/v/django-organice-theme-fullpage.svg
+   :alt: Latest version on PyPI
+   :target: https://pypi.python.org/pypi/django-organice-theme-fullpage
+.. |downloads| image:: https://img.shields.io/pypi/dm/django-organice-theme-fullpage.svg
+   :alt: Monthly downloads from PyPI
+   :target: https://pypi.python.org/pypi/django-organice-theme-fullpage
+.. |license| image:: https://img.shields.io/pypi/l/django-organice-theme-fullpage.svg
+   :alt: Software license
+   :target: https://www.apache.org/licenses/LICENSE-2.0.html
 .. _`django Organice`: http://organice.io/
 .. _`fullPage.js`: https://github.com/alvarotrigo/fullPage.js
 .. _`pure CSS Fork-Me ribbon`: https://github.com/simonwhitaker/github-fork-ribbon-css
