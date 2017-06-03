@@ -59,8 +59,9 @@ Download and Contributions
 
 Official repositories: (kept in sync)
 
-#. Bitbucket: https://bitbucket.org/bittner/django-organice-theme-fullpage
-#. GitHub: https://github.com/bittner/django-organice-theme-fullpage
+#. GitHub: https://github.com/Organice/django-organice
+#. GitLab: https://gitlab.com/organice/django-organice
+#. Bitbucket: https://bitbucket.org/organice/django-organice
 
 Getting Help
 ============
